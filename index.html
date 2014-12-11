@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html class="full" lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MRML View</title>
+  <title>MRML View</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles -->
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/the-big-picture.css" rel="stylesheet">
+  <!-- Custom styles -->
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/the-big-picture.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/dat-gui-light-theme.css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/dat-gui-light-theme.css">
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/dropzone.js"></script>
 
   <!-- If we want to debug / develop XTK, use this setup, serving
        an XTK directory with a build inside.  Otherwise, grab it from the
@@ -54,6 +48,11 @@
   <!-- <script type="text/javascript" src="http://get.goXTK.com/xtk.js"></script> -->
   <script type="text/javascript" src="js/xtk.js"></script>
 
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/docs.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="js/ie10-viewport-bug-workaround.js"></script>
+
 </head>
 <body>
     <div class="site-wrapper">
@@ -75,14 +74,14 @@
             </div>
           </div>
 
-          <div class="inner cover" id="frontpage">
-          <div class="drop-zone" id="drop-zone">
-            <h1 class="cover-heading">Drop file here.</h1>
-            <p class="lead">Drop an MRML file to view the imaging in 3D.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">or browse</a>
-            </p>
-			  </div>
+          <div id="frontpage" class="inner cover">
+            <div class="drop-zone" id="drop-zone">
+              <h1 class="cover-heading">Drop file here.</h1>
+              <p class="lead">Drop an MRML file to view the imaging in 3D.</p>
+              <p class="lead">
+                <a href="#" class="btn btn-lg btn-default">or browse</a>
+              </p>
+           </div>
           </div>
 
           <div class="mastfoot">
@@ -93,12 +92,12 @@
 
         </div>
 
-        </div>
+      </div>
 
-	</div>
+    </div>
 
-	<div id='viewer' style='display: none;'>
-	</div>
+    <div id='viewer' style='display: none;'>
+    </div>
 
     <script type="text/javascript" src="js/app.js"></script>
 </body>
