@@ -13,6 +13,7 @@ var dropzone = new Dropzone(document.body, {
 });
 dropzone.on('addedfile', function(file){
   $('#frontpage').hide();
+  $('.full').removeClass('full');
 
   startRenderer(file);
 
